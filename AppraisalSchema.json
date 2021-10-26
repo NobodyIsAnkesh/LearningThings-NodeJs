@@ -1,0 +1,596 @@
+{
+    "id": {
+        "type": "uuid"
+    },
+    "createdOn": {
+        "type": "timestamp"
+    },
+    "SUBJECT": {
+        "type": "object",
+        "properties": {
+            "Property Address": {
+                "type": "string"
+            },
+            "City": {
+                "type": "string"
+            },
+            "State": {
+                "type": "string"
+            },
+            "Zip Code": {
+                "type": "number"
+            },
+            "Borrower": {
+                "type": "string"
+            },
+            "Owner of Public Record": {
+                "type": "string"
+            },
+            "County": {
+                "type": "string"
+            },
+            "Legal Description": {
+                "type": "string"
+            },
+            "R.E. Taxes $": {
+                "type": "number"
+            },
+            "Occupant": {
+                "type": "string"
+            },
+            "PUD": {
+                "type": "boolean"
+            },
+            "HOA $": {
+                "type": "number"
+            },
+            "per year": {
+                "type": "boolean"
+            },
+            "per month": {
+                "type": "boolean"
+            },
+            "Property Rights Appraised": {
+                "type": "string"
+            },
+            "Assignment Type": {
+                "type": "string"
+            },
+            "Lender/Client": {
+                "type": "string"
+            },
+            "Address": {
+                "type": "string"
+            }
+        }
+    },
+    "NEIGHBORHOOD": {
+        "type": "object",
+        "properties": {
+            "Neighborhood Characteristics": {
+                "type": "object",
+                "properties": {
+                    "Location": {
+                        "type": "string"
+                    },
+                    "Built-Up": {
+                        "type": "string"
+                    },
+                    "Growth": {
+                        "type": "string"
+                    }
+                }
+            },
+            "2-4 Unit Housing Trends": {
+                "type": "object",
+                "properties": {
+                    "Property Values": {
+                        "type": "string"
+                    },
+                    "Demand/Supply": {
+                        "type": "string"
+                    },
+                    "Marketing Time": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Present Land Use %": {
+                "type": "object",
+                "properties": {
+                    "One-Unit": {
+                        "type": "number"
+                    },
+                    "2-4 Unit": {
+                        "type": "number"
+                    },
+                    "Multi-Family": {
+                        "type": "number"
+                    },
+                    "Commercial": {
+                        "type": "number"
+                    },
+                    "Other": {
+                        "type": "number"
+                    }
+                }
+            }
+        }
+    },
+    "SITE": {
+        "type": "object",
+        "properties": {
+            "Dimensions": {
+                "type": "string"
+            },
+            "Area": {
+                "type": "string"
+            },
+            "Zoning Compliance": {
+                "type": "string"
+            },
+            "Is the highest and best use of the subject property as improved (or as proposed per plans and specifications) the present use?": {
+                "type": "boolean"
+            },
+            "Utilities": {
+                "type": "object",
+                "properties": {
+                    "Electricity": {
+                        "type": "string",
+                        "enum": [
+                            "public",
+                            "other"
+                        ]
+                    },
+                    "Gas": {
+                        "type": "string",
+                        "enum": [
+                            "public",
+                            "other"
+                        ]
+                    },
+                    "Water": {
+                        "type": "string",
+                        "enum": [
+                            "public",
+                            "other"
+                        ]
+                    },
+                    "Sanitary Sewer": {
+                        "type": "string",
+                        "enum": [
+                            "public",
+                            "other"
+                        ]
+                    }
+                }
+            },
+            "FEMA Special Flood Hazard Area": {
+                "type": "boolean"
+            },
+            "FEMA Flood Zone": {
+                "type": "boolean"
+            },
+            "FEMA Map #": {
+                "type": "string"
+            },
+            "FEMA Map Date": {
+                "type": "date"
+            },
+            "Are the utilities and off-site improvements typical for the market area?": {
+                "type": "boolean"
+            },
+            "Are there any adverse site conditions or external factors (easements, encroachments, environmental conditions, land uses, etc.)?": {
+                "type": "boolean"
+            }
+        }
+    },
+    "IMPROVEMENTS": {
+        "type": "object",
+        "properties": {
+            "GENERAL DESCRIPTION": {
+                "type": "object",
+                "properties": {
+                    "Units": {
+                        "type": "string",
+                        "enum": [
+                            "Two",
+                            "Three",
+                            "Four"
+                        ]
+                    },
+                    "Accessory Unit": {
+                        "type": "boolean"
+                    },
+                    "# of Stories": {
+                        "type": "number"
+                    },
+                    "# of bldgs": {
+                        "type": "number"
+                    },
+                    "Type": {
+                        "type": "string",
+                        "enum": [
+                            "Det.",
+                            "Att.",
+                            "S-Det./End Unit"
+                        ]
+                    },
+                    "Existing": {
+                        "type": "boolean"
+                    },
+                    "Proposed": {
+                        "type": "boolean"
+                    },
+                    "Under Const": {
+                        "type": "boolean"
+                    },
+                    "Design (Style)": {
+                        "type": "string"
+                    },
+                    "Year Built": {
+                        "type": "number"
+                    },
+                    "Effective Age (Yrs)": {
+                        "type": "number"
+                    }
+                }
+            },
+            "FOUNDATION": {
+                "type": "object",
+                "properties": {
+                    "Concrete Slab": {
+                        "type": "boolean"
+                    },
+                    "Crawl Space": {
+                        "type": "boolean"
+                    },
+                    "Full Basement": {
+                        "type": "boolean"
+                    },
+                    "Partial Basement": {
+                        "type": "boolean"
+                    },
+                    "Basement Area": {
+                        "type": "number"
+                    },
+                    "Basement Finish ": {
+                        "type": "number"
+                    },
+                    "Outside Entry/Exit": {
+                        "type": "boolean"
+                    },
+                    "Sump Pump": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "Describe the condition of the property (including needed repairs, deterioration, renovations, remodeling, etc.)": {
+                "type": "string"
+            },
+            "Are there any physical deficiencies or adverse conditions that affect the livability, soundness, or structural integrity of the property?": {
+                "type": "boolean"
+            },
+            "Does the property generally conform to the neighborhood (functional utility, style, condition, use, construction, etc.)? ": {
+                "type": "boolean"
+            },
+            "Is the property subject to rent control?": {
+                "type": "boolean"
+            }
+        }
+    },
+    "COMPARABLE RENTAL DATA": {
+        "type": "object",
+        "properties": {
+            "COMPARABLE RENTAL NO. 1": {
+                "type": "object",
+                "properties": {
+                    "Address": {
+                        "type": "string"
+                    },
+                    "Proximity to Subject": {
+                        "type": "string"
+                    },
+                    "Current Monthly Rent": {
+                        "type": "number"
+                    },
+                    "Condition": {
+                        "type": "string"
+                    },
+                    "Gross Building Area": {
+                        "type": "number"
+                    }
+                }
+            },
+            "COMPARABLE RENTAL NO. 2": {
+                "type": "object",
+                "properties": {
+                    "Address": {
+                        "type": "string"
+                    },
+                    "Proximity to Subject": {
+                        "type": "string"
+                    },
+                    "Current Monthly Rent": {
+                        "type": "number"
+                    },
+                    "Condition": {
+                        "type": "string"
+                    },
+                    "Gross Building Area": {
+                        "type": "number"
+                    }
+                }
+            },
+            "COMPARABLE RENTAL NO. 3": {
+                "type": "object",
+                "properties": {
+                    "Address": {
+                        "type": "string"
+                    },
+                    "Proximity to Subject": {
+                        "type": "string"
+                    },
+                    "Current Monthly Rent": {
+                        "type": "number"
+                    },
+                    "Condition": {
+                        "type": "string"
+                    },
+                    "Gross Building Area": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Analysis of rental data and support for estimated market rents for the individual subject units reported below (including the adequacy of the comparables, rental concessions, etc.)": {
+                "type": "string"
+            }
+        }
+    },
+    "SUBJECT RENT SCHEDULE": {
+        "type": "object",
+        "properties": {
+            "Leases": {
+                "type": "object",
+                "properties": {
+                    "Comment on lease data": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Actual Rents": {
+                "type": "object",
+                "properties": {
+                    "Total Actual Monthly Rent": {
+                        "type": "number"
+                    },
+                    "Total Actual Monthly Income": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Opinion Of Market Rent": {
+                "type": "object",
+                "properties": {
+                    "Total Gross Monthly Rent": {
+                        "type": "number"
+                    },
+                    "Total Estimated Monthly Income": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Comments on actual or estimated rents and other monthly income (including personal property)": {
+                "type": "string"
+            }
+        }
+    },
+    "PRIOR SALE HISTORY": {
+        "type": "object",
+        "properties": {
+            "Date of Prior Sale/Transfer": {
+                "type": "date"
+            }
+        }
+    },
+    "SALES COMPARISON APPROACH": {
+        "type": "object",
+        "properties": {
+            "COMPARABLE SALE NO. 1": {
+                "type": "object",
+                "properties": {
+                    "Address": {
+                        "type": "string"
+                    },
+                    "Proximity to Subject": {
+                        "type": "string"
+                    },
+                    "Leasehold/Fee Simple": {
+                        "type": "string"
+                    },
+                    "Quality of Construction": {
+                        "type": "string"
+                    },
+                    "Condition": {
+                        "type": "string"
+                    },
+                    "Gross Building Area": {
+                        "type": "number"
+                    }
+                }
+            },
+            "COMPARABLE SALE NO. 2": {
+                "type": "object",
+                "properties": {
+                    "Address": {
+                        "type": "string"
+                    },
+                    "Proximity to Subject": {
+                        "type": "string"
+                    },
+                    "Leasehold/Fee Simple": {
+                        "type": "string"
+                    },
+                    "Quality of Construction": {
+                        "type": "string"
+                    },
+                    "Condition": {
+                        "type": "string"
+                    },
+                    "Gross Building Area": {
+                        "type": "number"
+                    }
+                }
+            },
+            "COMPARABLE SALE NO. 3": {
+                "type": "object",
+                "properties": {
+                    "Address": {
+                        "type": "string"
+                    },
+                    "Proximity to Subject": {
+                        "type": "string"
+                    },
+                    "Leasehold/Fee Simple": {
+                        "type": "string"
+                    },
+                    "Quality of Construction": {
+                        "type": "string"
+                    },
+                    "Condition": {
+                        "type": "string"
+                    },
+                    "Gross Building Area": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Summary of Sales Comparison Approach including reconciliation of the above indicators of value": {
+                "type": "string"
+            },
+            "Indicated Value by Sales Comparison Approach $": {
+                "type": "number"
+            }
+        }
+    },
+    "RECONCILIATION": {
+        "type": "object",
+        "properties": {
+            "Indicated Value by": {
+                "type": "object",
+                "properties": {
+                    "Sales Comparison Analysis $": {
+                        "type": "number"
+                    },
+                    "Income Approach $": {
+                        "type": "number"
+                    },
+                    "Cost Approach (if developed) $": {
+                        "type": "number"
+                    }
+                }
+            },
+            "This appraisal is made": {
+                "type": "string",
+                "enum": [
+                    "as is",
+                    "subject to completion per plans and specifications on the basis of a hypothetical condition that the improvements have been completed",
+                    "subject to the following repairs or alterations on the basis of a hypothetical condition that the repairs or alterations have been completed, or",
+                    "subject to the following required inspection based on the extraordinary assumption that the condition or deficiency does not require alteration or repair"
+                ]
+            },
+            "Based on a complete visual inspection of the interior and exterior areas of the subject property, defined scope of work, statement of assumptions and limiting conditions, and appraiser's certification, my (our) opinion of the market value, as defined, of the real property that is the subject of this report is": {
+                "type": "object",
+                "properties": {
+                    "market value": {
+                        "type": "number"
+                    },
+                    "as of": {
+                        "type": "date"
+                    }
+                }
+            }
+        }
+    },
+    "COST APPROACH": {
+        "type": "object",
+        "properties": {
+            "COST APPROACH TO VALUE": {
+                "type": "object",
+                "properties": {
+                    "OPINION OF SITE VALUE": {
+                        "type": "number"
+                    },
+                    "Dwelling": {
+                        "type": "number"
+                    },
+                    "Total Estimate of Cost-New": {
+                        "type": "number"
+                    },
+                    "INDICATED VALUE BY COST APPROACH": {
+                        "type": "number"
+                    }
+                }
+            }
+        }
+    },
+    "APPRAISER": {
+        "type": "object",
+        "properties": {
+            "Signature": {
+                "type": "image"
+            },
+            "Name": {
+                "type": "string"
+            },
+            "Company Name": {
+                "type": "string"
+            },
+            "Email Address": {
+                "type": "email"
+            },
+            "Date of Signature and Report": {
+                "type": "date"
+            },
+            "Effective Date of Appraisal": {
+                "type": "date"
+            },
+            "State Certification": {
+                "type": "number"
+            },
+            "Expiration Date of Certification or License": {
+                "type": "date"
+            },
+            "LENDER/CLIENT": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "type": "string"
+                    },
+                    "Company Name": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "APPRAISAL AND REPORT IDENTIFICATION": {
+        "type": "object",
+        "properties": {
+            "This report was prepared under the following USPAP reporting option:": {
+                "type": "string",
+                "enum": [
+                    "Appraisal Report",
+                    "Restricted Appraisal Report"
+                ]
+            }
+        }
+    },
+    "Additional Certifications": {
+        "type": "string",
+        "enum": [
+            "I have performed NO services, as an appraiser or in any other capacity, regarding the property that is the subject of this report within the three-year period immediately preceding acceptance of this assignment.",
+            "I HAVE performed services, as an appraiser or in another capacity, regarding the property that is the subject of this report within the three-year period immediately preceding acceptance of this assignment. Those services are described in the comments below."
+        ]
+    }
+}
