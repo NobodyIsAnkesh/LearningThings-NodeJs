@@ -28,7 +28,7 @@ router.get('/:a/ankesh/:d/', function (req, res) {
     //   q['code'] = req.query.code;
     q['level'] = parseInt(req.query.level);
     const s3 = new AWS.S3()
-    AWS.config.update({ accessKeyId: 'AKIARIPYRZ5E2N7ONPAE', secretAccessKey: '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', region: 'ap-south-1' })
+    AWS.config.update({ accessKeyId: 'something', secretAccessKey: 'something', region: 'ap-south-1' })
 
     // Tried with and without this. Since s3 is not region-specific, I don't
     // think it should be necessary.
